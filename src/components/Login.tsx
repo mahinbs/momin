@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import { supabase } from '@/integrations/supabase/client';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -22,6 +24,7 @@ export function Login({
   const {
     signIn
   } = useAuth();
+  const navigate = useNavigate();
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
@@ -38,6 +41,20 @@ export function Login({
       if (error) {
         setError(error.message);
       } else {
+        // Check if the signed-in user is an admin; if yes, redirect to /admin
+        const { data: userResult } = await supabase.auth.getUser();
+        const userId = userResult.user?.id;
+        if (userId) {
+          const { data: adminRow } = await supabase
+            .from('admin_users')
+            .select('*')
+            .eq('user_id', userId)
+            .eq('is_active', true)
+            .maybeSingle();
+          if (adminRow) {
+            navigate('/admin');
+          }
+        }
         onClose?.();
       }
     } catch (err) {
