@@ -391,14 +391,14 @@ const Admin = () => {
 
       // Upload to Supabase Edge Function
       const response = await fetch(
-        "https://tdzyskyjqobglueymvmx.supabase.co/functions/v1/upload-images",
+        "https://hqsiusbbjwzboytkgreb.supabase.co/functions/v1/upload-images",
         {
           method: "POST",
           body: formData,
           headers: {
             Authorization: `Bearer ${
               import.meta.env.VITE_SUPABASE_ANON_KEY ||
-              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRkenlza3lqcW9iZ2x1ZXltdm14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1NjM4MzYsImV4cCI6MjA3MDEzOTgzNn0.5fQXZ2dJF30gPq_VtKmg4L-_fV5pOp5Pd56PU5mHcUM"
+              "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhxc2l1c2Jiand6Ym95dGtncmViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1NjUyNzcsImV4cCI6MjA3NTE0MTI3N30.uPBGjXVS7SOun1XhK7GW6EBP-DHtC0QdVwGUjdCA5eI"
             }`,
           },
         }

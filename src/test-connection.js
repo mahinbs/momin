@@ -2,11 +2,11 @@
 // Run this in your browser console
 
 // Test the connection directly
-fetch('https://tdzyskyjqobglueymvmx.supabase.co/rest/v1/products?select=*&limit=1', {
+fetch('https://hqsiusbbjwzboytkgreb.supabase.co/rest/v1/products?select=*&limit=1', {
   method: 'GET',
   headers: {
-    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRkenlza3lqcW9iZ2x1ZXltdm14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1NjM4MzYsImV4cCI6MjA3MDEzOTgzNn0.5fQXZ2dJF30gPq_VtKmg4L-_fV5pOp5Pd56PU5mHcUM',
-    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRkenlza3lqcW9iZ2x1ZXltdm14Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ1NjM4MzYsImV4cCI6MjA3MDEzOTgzNn0.5fQXZ2dJF30gPq_VtKmg4L-_fV5pOp5Pd56PU5mHcUM',
+    'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhxc2l1c2Jiand6Ym95dGtncmViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1NjUyNzcsImV4cCI6MjA3NTE0MTI3N30.uPBGjXVS7SOun1XhK7GW6EBP-DHtC0QdVwGUjdCA5eI',
+    'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imhxc2l1c2Jiand6Ym95dGtncmViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1NjUyNzcsImV4cCI6MjA3NTE0MTI3N30.uPBGjXVS7SOun1XhK7GW6EBP-DHtC0QdVwGUjdCA5eI',
     'Content-Type': 'application/json'
   }
 })
