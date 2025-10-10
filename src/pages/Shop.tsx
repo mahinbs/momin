@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Search, Filter, Grid, List } from "lucide-react";
 import { productsService, convertToFrontendProduct } from "@/services/products";
-import heroImage from "@/assets/hero-pets.jpg";
+import heroImage from "@/assets/about-team.webp";
 
 interface Product {
   id: string;
@@ -115,9 +115,9 @@ const Shop = () => {
         <img
           src={heroImage}
           alt="Shop Banner"
-          className="absolute inset-0 w-full h-full object-cover opacity-40"
+          className="absolute inset-0 w-full h-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-60" />
         <div className="absolute inset-0 bg-gradient-mesh opacity-30" />
         <div className="relative z-10 max-w-5xl mx-auto space-y-8 px-4">
           <div className="animate-fade-in">
@@ -128,10 +128,10 @@ const Shop = () => {
               </span>
             </h1>
             <h2 className="text-2xl md:text-3xl drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] font-medium mb-6">
-              Premium pet care products for your beloved companions
+              Professional hair care electronics for beautiful results
             </h2>
             <p className="text-lg md:text-xl text-white/95 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] max-w-4xl mx-auto leading-relaxed">
-              Discover our collection of innovative pet toys and interactive toys designed to keep your pets happy, healthy, and entertained.
+              Discover our collection of premium hair dryers, straighteners, and styling tools designed to give you salon-quality results at home.
             </p>
           </div>
         </div>
@@ -155,7 +155,7 @@ const Shop = () => {
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                   <input
                     type="text"
-                    placeholder="Search for the perfect pet toy..."
+                    placeholder="Search for the perfect hair care tool..."
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     className="w-full pl-12 pr-6 py-4 bg-card/50 hover:bg-card/70 backdrop-blur-md border border-border/50 rounded-2xl hover:border-primary/30 focus:border-primary/50 focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 placeholder-muted-foreground text-foreground"
@@ -198,7 +198,7 @@ const Shop = () => {
               {filteredProducts.length > 0 && (
                 <div className="text-sm text-muted-foreground">
                   Found {filteredProducts.length} amazing product
-                  {filteredProducts.length !== 1 ? "s" : ""} for your pet
+                  {filteredProducts.length !== 1 ? "s" : ""} for your hair care needs
                 </div>
               )}
             </div>
@@ -217,7 +217,7 @@ const Shop = () => {
                 </h3>
                 <p className="text-muted-foreground mb-8 text-lg">
                   Try adjusting your search or filter criteria to find the
-                  perfect toy for your pet
+                  perfect hair care tool for you
                 </p>
                 <Button
                   onClick={() => {

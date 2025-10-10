@@ -1,7 +1,7 @@
 import { Facebook, Twitter, Instagram, Mail, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import zipptyLogo from "@/assets/zippty-logo.png";
+import beuniqLogo from "@/assets/logo.png";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -19,7 +19,7 @@ const Footer = () => {
     const socialLinks = {
       facebook: "https://www.facebook.com/share/19hGbSKx48/",
       twitter: "#",
-      instagram: "https://www.instagram.com/zippty_official?igsh=MXR0d2RxNDM2ejd5Yg==",
+      instagram: "https://www.instagram.com/beuniq_official?igsh=MXR0d2RxNDM2ejd5Yg==",
       email: "#",
     };
     if (socialLinks[platform as keyof typeof socialLinks]) {
@@ -28,46 +28,46 @@ const Footer = () => {
     }
   };
   return (
-    <footer className="bg-[#abd5ff] border-t text-slate-900">
+    <footer className="bg-gradient-to-br from-[#2d1b3d] via-[#3d2447] to-[#2d1b3d] border-t border-white/10 text-white">
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link to="/">
               <img
-                src={zipptyLogo}
-                alt="Zippty - Premium Pet Care"
+                src={beuniqLogo}
+                alt="Beuniq - Premium Hair Care"
                 className="h-20 w-auto transition-transform duration-300 p-3 rounded"
               />
             </Link>
-            <p className="text-slate-900 max-w-xs">
-              The smarter way to shop for your pet. Cutting-edge technology
-              meets irresistible fun.
+            <p className="text-white/80 max-w-xs">
+              Professional hair care at your fingertips. Premium quality
+              meets salon-worthy results.
             </p>
             <div className="flex space-x-4">
               <button
                 onClick={() => handleSocialClick("facebook")}
-                className="h-5 w-5 text-slate-900 hover:text-blue-800 cursor-pointer transition-all duration-300 hover:scale-110"
+                className="h-5 w-5 text-white/70 hover:text-rose-300 cursor-pointer transition-all duration-300 hover:scale-110"
                 title="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </button>
               <button
                 onClick={() => handleSocialClick("twitter")}
-                className="h-5 w-5 text-slate-900 hover:text-blue-800 cursor-pointer transition-all duration-300 hover:scale-110"
+                className="h-5 w-5 text-white/70 hover:text-rose-300 cursor-pointer transition-all duration-300 hover:scale-110"
                 title="Twitter (Coming Soon)"
               >
                 <Twitter className="h-5 w-5" />
               </button>
               <button
                 onClick={() => handleSocialClick("instagram")}
-                className="h-5 w-5 text-slate-900 hover:text-pink-400 cursor-pointer transition-all duration-300 hover:scale-110"
+                className="h-5 w-5 text-white/70 hover:text-rose-300 cursor-pointer transition-all duration-300 hover:scale-110"
                 title="Instagram"
               >
                 <Instagram className="h-5 w-5" />
               </button>
               <button
                 onClick={() => handleSocialClick("email")}
-                className="h-5 w-5 text-slate-900 hover:text-blue-800 cursor-pointer transition-all duration-300 hover:scale-110"
+                className="h-5 w-5 text-white/70 hover:text-rose-300 cursor-pointer transition-all duration-300 hover:scale-110"
                 title="Email (Coming Soon)"
               >
                 <Mail className="h-5 w-5" />
@@ -81,22 +81,22 @@ const Footer = () => {
               <div className="space-y-2 text-sm">
                 <Link
                   to="/shop"
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1"
                 >
-                  Interactive Robots
+                  Hair Dryers
                 </Link>
 
                 <Link
                   to="/shop"
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1"
                 >
-                  Cat Toys
+                  Hair Straighteners
                 </Link>
                 <Link
                   to="/shop"
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1"
                 >
-                  Dog Toys
+                  Styling Tools
                 </Link>
               </div>
             </div>
@@ -108,27 +108,27 @@ const Footer = () => {
               <div className="space-y-2 text-sm">
                 <Link
                   to="/contact"
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1"
                 >
                   Contact Us
                 </Link>
                 <button
                   onClick={() => window.open("/shipping", "_blank")}
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1 text-left w-full"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1 text-left w-full"
                 >
                   Shipping Info
                   <ExternalLink className="inline h-3 w-3 ml-1" />
                 </button>
                 <button
                   onClick={() => window.open("/returns", "_blank")}
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1 text-left w-full"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1 text-left w-full"
                 >
                   Returns
                   <ExternalLink className="inline h-3 w-3 ml-1" />
                 </button>
                 <button
                   onClick={() => window.open("/warranty", "_blank")}
-                  className="block text-slate-900 hover:text-blue-800 transition-all duration-300 hover:translate-x-1 text-left w-full"
+                  className="block text-white/70 hover:text-rose-300 transition-all duration-300 hover:translate-x-1 text-left w-full"
                 >
                   Warranty
                   <ExternalLink className="inline h-3 w-3 ml-1" />
@@ -166,27 +166,27 @@ const Footer = () => {
           </div> */}
         </div>
 
-        <div className="border-t border-slate-800 mt-12 pt-8 text-center text-sm text-slate-900">
+        <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-white/70">
           <p>
-            &copy; {new Date().getFullYear()} Zippty. All rights reserved. Made
-            with ❤️ for pet lovers everywhere.
+            &copy; {new Date().getFullYear()} Beuniq. All rights reserved. Made
+            with ❤️ for everyone who loves beautiful hair.
           </p>
           <div className="mt-4 space-x-6">
             <Link
               to="/privacy"
-              className="hover:text-blue-800 transition-colors duration-300"
+              className="hover:text-rose-300 transition-colors duration-300"
             >
               Privacy Policy
             </Link>
             <Link
               to="/terms"
-              className="hover:text-blue-800 transition-colors duration-300"
+              className="hover:text-rose-300 transition-colors duration-300"
             >
               Terms of Service
             </Link>
             <Link
               to="/about"
-              className="hover:text-blue-800 transition-colors duration-300"
+              className="hover:text-rose-300 transition-colors duration-300"
             >
               About Us
             </Link>

@@ -79,7 +79,7 @@ const ProductShowcase = () => {
             Featured Products
           </h2>
           <p className="text-lg max-w-2xl mx-auto">
-            Explore our top-rated interactive toys designed to bring enrichment to your pet's life.
+            Explore our top-rated professional hair care tools designed to transform your styling routine.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">

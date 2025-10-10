@@ -44,7 +44,7 @@ const Returns = () => {
               <div className="bg-gradient-to-r from-red-600/20 to-orange-600/20 p-6 rounded-lg border border-red-500/30">
                 <h3 className="text-xl font-semibold mb-3 text-red-400">All Sales Are Final</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Due to the nature of our products and hygiene considerations for pet items, we do not accept returns or exchanges. 
+                  Due to the nature of our products and hygiene considerations for personal care items, we do not accept returns or exchanges. 
                   Please carefully review your order before purchasing.
                 </p>
               </div>
@@ -61,7 +61,7 @@ const Returns = () => {
                     <li>High-quality, tested products</li>
                     <li>Products arrive in perfect condition</li>
                     <li>Accurate product descriptions</li>
-                    <li>Safe materials for pets</li>
+                    <li>Safe materials for personal use</li>
                     <li>Products match advertised specifications</li>
                   </ul>
                 </div>
@@ -87,11 +87,11 @@ const Returns = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <h4 className="font-semibold mb-2">Email</h4>
-                  <p className="text-muted-foreground">info@zippty.in</p>
+                  <p className="text-muted-foreground">info@beuniq.in</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Phone</h4>
-                  <p className="text-muted-foreground">+91 9352046174</p>
+                  <p className="text-muted-foreground">+91 9090909090</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Live Chat</h4>

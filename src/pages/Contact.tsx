@@ -3,8 +3,8 @@ import Footer from "@/components/Footer";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-pets.jpg";
-import logo from "../assets/zippty-logo.png";
+import heroImage from "@/assets/about-team.webp";
+import logo from "../assets/logo.png";
 
 const Contact = () => {
   return (
@@ -17,28 +17,28 @@ const Contact = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
           style={{ backgroundImage: `url(${heroImage})` }}
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-50" />
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto flex flex-col gap-6">
             <img
               src={logo}
-              alt="Zippty"
+              alt="Beuniq"
               className="w-28 mx-auto object-contain"
             />
             <h2 className="text-2xl md:text-3xl">
-              If animals could talk, they'd talk about us!
+              Transform Your Hair with Professional Care!
             </h2>
             <p className="text-lg text-white/90">
               Visit our store or get in touch with us for any questions about
-              our products.
+              our professional hair care products.
             </p>
             <Link to="/shop">
               <Button variant="hero" size="lg">
                 Shop Now →
               </Button>
             </Link>
-            <div className="text-white/80">Collection of happy pet faces</div>
+            <div className="text-white/80">Your journey to beautiful hair starts here</div>
           </div>
         </div>
       </section>
@@ -56,7 +56,7 @@ const Contact = () => {
               </h2>
               <p className="text-muted-foreground">
                 Visit our store or contact us for any questions about our
-                products and services.
+                hair care products and styling services.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ const Contact = () => {
                     <div>
                       <h4 className="font-semibold">Address</h4>
                       <p className="text-muted-foreground">
-                        JP Colony, Shastri Nagar, Jaipur, Rajasthan -302016
+                        Banglore, India
                       </p>
                     </div>
                   </div>
@@ -84,7 +84,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold">Email</h4>
-                      <p className="text-muted-foreground">info@zippty.in</p>
+                      <p className="text-muted-foreground">info@beuniq.in</p>
                     </div>
                   </div>
 
@@ -94,7 +94,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold">Phone</h4>
-                      <p className="text-muted-foreground">+91 9352046174</p>
+                      <p className="text-muted-foreground">+91 9090909090</p>
                     </div>
                   </div>
 

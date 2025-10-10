@@ -183,7 +183,7 @@ const Hero = () => {
                 2k+
               </div>
               <div className="text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-                Happy Pets
+                Happy Customers
               </div>
             </GlassCard>
 
@@ -213,7 +213,7 @@ const Hero = () => {
                 50+
               </div>
               <div className="text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
-                Smart Toys
+                Styling Tools
               </div>
             </GlassCard>
           </div> */}

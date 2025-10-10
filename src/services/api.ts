@@ -1,13 +1,9 @@
-import { Product, CartItem } from '@/contexts/CartContext';
+import { Product, CartItem } from "@/contexts/CartContext";
 
 // Re-export Product type for easier imports
 export type { Product };
-import { supabase } from '@/integrations/supabase/client';
-import { cartSyncRateLimiter } from '@/lib/rateLimiter';
-import robotToyPremium from '@/assets/robot-toy-premium.jpg';
-import catToyPremium from '@/assets/cat-toy-premium.jpg';
-import puzzleFeederPremium from '@/assets/puzzle-feeder-premium.jpg';
-import laserToyPremium from '@/assets/laser-toy-premium.jpg';
+import { supabase } from "@/integrations/supabase/client";
+import { cartSyncRateLimiter } from "@/lib/rateLimiter";
 
 // Product API functions - Using Supabase directly
 export const productAPI = {
@@ -18,7 +14,7 @@ export const productAPI = {
       // In the future, you can fetch from Supabase products table
       return getMockProducts();
     } catch (error) {
-      console.error('Error fetching products:', error);
+      console.error("Error fetching products:", error);
       // Return mock data if API fails
       return getMockProducts();
     }
@@ -28,9 +24,9 @@ export const productAPI = {
   getProductById: async (id: string): Promise<Product | null> => {
     try {
       const products = getMockProducts();
-      return products.find(product => product.id === id) || null;
+      return products.find((product) => product.id === id) || null;
     } catch (error) {
-      console.error('Error fetching product:', error);
+      console.error("Error fetching product:", error);
       return null;
     }
   },
@@ -40,13 +36,14 @@ export const productAPI = {
     try {
       const products = getMockProducts();
       const searchTerm = query.toLowerCase();
-      return products.filter(product => 
-        product.name.toLowerCase().includes(searchTerm) ||
-        product.description.toLowerCase().includes(searchTerm) ||
-        product.category.toLowerCase().includes(searchTerm)
+      return products.filter(
+        (product) =>
+          product.name.toLowerCase().includes(searchTerm) ||
+          product.description.toLowerCase().includes(searchTerm) ||
+          product.category.toLowerCase().includes(searchTerm)
       );
     } catch (error) {
-      console.error('Error searching products:', error);
+      console.error("Error searching products:", error);
       return [];
     }
   },
@@ -58,39 +55,47 @@ export const cartAPI = {
   syncCart: async (cartItems: CartItem[]): Promise<boolean> => {
     try {
       // Check rate limiting before making the request
-      if (!cartSyncRateLimiter.canMakeRequest('cart-sync')) {
-        const timeUntilNext = cartSyncRateLimiter.getTimeUntilNextRequest('cart-sync');
-        throw new Error(`Rate limit exceeded. Try again in ${Math.ceil(timeUntilNext / 1000)} seconds.`);
+      if (!cartSyncRateLimiter.canMakeRequest("cart-sync")) {
+        const timeUntilNext =
+          cartSyncRateLimiter.getTimeUntilNextRequest("cart-sync");
+        throw new Error(
+          `Rate limit exceeded. Try again in ${Math.ceil(
+            timeUntilNext / 1000
+          )} seconds.`
+        );
       }
 
-      const { data: { user } } = await supabase.auth.getUser();
-      
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
       if (!user) {
         return false; // No user, skip sync
       }
 
       // Check if cart data has actually changed to avoid unnecessary updates
       const currentCart = user.user_metadata?.cart || [];
-      const cartChanged = JSON.stringify(currentCart) !== JSON.stringify(cartItems);
-      
+      const cartChanged =
+        JSON.stringify(currentCart) !== JSON.stringify(cartItems);
+
       if (!cartChanged) {
         return true; // No change, skip update
       }
 
       // Store cart in Supabase user_metadata or a separate cart table
       const { error } = await supabase.auth.updateUser({
-        data: { cart: cartItems }
+        data: { cart: cartItems },
       });
 
       if (error) {
-        console.error('Error syncing cart to Supabase:', error);
+        console.error("Error syncing cart to Supabase:", error);
         // Re-throw the error so the calling code can handle rate limiting
         throw error;
       }
-      
+
       return true;
     } catch (error) {
-      console.error('Error syncing cart:', error);
+      console.error("Error syncing cart:", error);
       throw error; // Re-throw to allow proper error handling
     }
   },
@@ -98,8 +103,10 @@ export const cartAPI = {
   // Get user's cart from Supabase
   getUserCart: async (): Promise<CartItem[]> => {
     try {
-      const { data: { user } } = await supabase.auth.getUser();
-      
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
+
       if (!user) {
         return [];
       }
@@ -108,7 +115,7 @@ export const cartAPI = {
       const cart = user.user_metadata?.cart || [];
       return Array.isArray(cart) ? cart : [];
     } catch (error) {
-      console.error('Error fetching user cart:', error);
+      console.error("Error fetching user cart:", error);
       return [];
     }
   },
@@ -117,113 +124,118 @@ export const cartAPI = {
 // Mock data for development/testing
 const getMockProducts = (): Product[] => [
   {
-    id: '1',
-    name: 'SmartPlay Robot Companion',
+    id: "1",
+    name: "SmartPlay Robot Companion",
     price: 12499,
     originalPrice: 16699,
-    image: robotToyPremium,
-    category: 'Interactive Robots',
-    description: 'An advanced AI-powered robot companion that adapts to your pet\'s behavior and provides hours of interactive entertainment.',
+    image: "robotToyPremium",
+    category: "Interactive Robots",
+    description:
+      "An advanced AI-powered robot companion that adapts to your pet's behavior and provides hours of interactive entertainment.",
     features: [
-      'AI-powered adaptive play modes',
-      'Motion sensors and obstacle avoidance',
-      'LED light patterns for visual stimulation',
-      'Rechargeable battery (8+ hours)',
-      'Safe, durable materials',
-      'App connectivity for remote control'
+      "AI-powered adaptive play modes",
+      "Motion sensors and obstacle avoidance",
+      "LED light patterns for visual stimulation",
+      "Rechargeable battery (8+ hours)",
+      "Safe, durable materials",
+      "App connectivity for remote control",
     ],
     rating: 5,
     reviews: 127,
     isNew: true,
   },
   {
-    id: '2',
-    name: 'FelineBot Interactive Cat Toy',
+    id: "2",
+    name: "Professional Ionic Hair Dryer",
     price: 7499,
-    image: catToyPremium,
-    category: 'Cat Toys',
-    description: 'A high-tech interactive toy designed specifically for cats, featuring feathers, motion sensors, and unpredictable movement patterns.',
+    image: "catToyPremium",
+    category: "Hair Dryers",
+    description:
+      "A professional-grade ionic hair dryer featuring advanced heat control, multiple speed settings, and salon-quality results.",
     features: [
-      'Automatic motion detection',
-      'Replaceable feather attachments',
-      'Silent motor operation',
-      'Timer-based play sessions',
-      'Battery level indicator',
-      'Washable components'
+      "Ionic technology for frizz reduction",
+      "3 heat and 2 speed settings",
+      "Cool shot button",
+      "Lightweight ergonomic design",
+      "1800W powerful motor",
+      "Removable air filter",
     ],
     rating: 5,
     reviews: 89,
   },
   {
-    id: '3',
-    name: 'BrainBoost Puzzle Feeder',
+    id: "3",
+    name: "Ceramic Hair Straightener Pro",
     price: 5849,
     originalPrice: 7499,
-    image: puzzleFeederPremium,
-    category: 'Smart Feeders',
-    description: 'Transform mealtime into a mental workout with this innovative puzzle feeder.',
+    image: "puzzleFeederPremium",
+    category: "Hair Straighteners",
+    description:
+      "Transform your hair styling routine with this professional ceramic straightener for sleek, salon-quality results.",
     features: [
-      'Adjustable difficulty levels',
-      'Multiple feeding compartments',
-      'Non-slip base design',
-      'Easy to clean and fill',
-      'Slows down eating pace',
-      'Suitable for all pet sizes'
+      "Adjustable temperature settings",
+      "Ceramic heating plates",
+      "Fast heat-up time",
+      "Auto shut-off safety feature",
+      "360° swivel cord",
+      "Suitable for all hair types",
     ],
     rating: 4,
     reviews: 203,
   },
   {
-    id: '4',
-    name: 'AutoLaser Pro Pet Entertainment',
+    id: "4",
+    name: "Professional Curling Iron Set",
     price: 6349,
-    image: laserToyPremium,
-    category: 'Cat Toys',
-    description: 'Professional-grade automatic laser toy with multiple play patterns and safety features.',
+    image: "laserToyPremium",
+    category: "Styling Tools",
+    description:
+      "Professional-grade curling iron set with multiple barrel sizes and advanced ceramic technology.",
     features: [
-      '5 different laser patterns',
-      'Auto shut-off safety timer',
-      'Silent operation mode',
-      'Wall or floor mounting',
-      'Remote control included',
-      'Pet-safe laser technology'
+      "5 different laser patterns",
+      "Auto shut-off safety timer",
+      "Silent operation mode",
+      "Wall or floor mounting",
+      "Remote control included",
+      "Pet-safe laser technology",
     ],
     rating: 5,
     reviews: 156,
   },
   {
-    id: '5',
-    name: 'Smart Treat Dispenser',
+    id: "5",
+    name: "Smart Treat Dispenser",
     price: 7999,
-    image: puzzleFeederPremium,
-    category: 'Smart Feeders',
-    description: 'WiFi-enabled treat dispenser with camera and two-way audio.',
+    image: "puzzleFeederPremium",
+    category: "Smart Feeders",
+    description: "WiFi-enabled treat dispenser with camera and two-way audio.",
     features: [
-      'HD camera with night vision',
-      'Two-way audio communication',
-      'Scheduled treat dispensing',
-      'Mobile app control',
-      'Treat portion control',
-      'Cloud video storage'
+      "HD camera with night vision",
+      "Two-way audio communication",
+      "Scheduled treat dispensing",
+      "Mobile app control",
+      "Treat portion control",
+      "Cloud video storage",
     ],
     rating: 4,
     reviews: 234,
   },
   {
-    id: '6',
-    name: 'Interactive Ball Launcher',
+    id: "6",
+    name: "Interactive Ball Launcher",
     price: 10849,
     originalPrice: 13349,
-    image: robotToyPremium,
-    category: 'Interactive Robots',
-    description: 'Automatic ball launcher that keeps dogs entertained for hours.',
+    image: "robotToyPremium",
+    category: "Interactive Robots",
+    description:
+      "Automatic ball launcher that keeps dogs entertained for hours.",
     features: [
-      '3 distance settings (10-30ft)',
-      'Motion safety sensors',
-      'Weatherproof design',
-      'Rechargeable battery',
-      'Compatible with standard tennis balls',
-      'Training mode for new pets'
+      "3 distance settings (10-30ft)",
+      "Motion safety sensors",
+      "Weatherproof design",
+      "Rechargeable battery",
+      "Compatible with standard tennis balls",
+      "Training mode for new pets",
     ],
     rating: 5,
     reviews: 178,
@@ -233,12 +245,15 @@ const getMockProducts = (): Product[] => [
 
 // Utility functions
 export const formatPrice = (price: number): string => {
-  return new Intl.NumberFormat('en-IN', {
-    style: 'currency',
-    currency: 'INR',
+  return new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
   }).format(price);
 };
 
-export const calculateDiscount = (originalPrice: number, currentPrice: number): number => {
+export const calculateDiscount = (
+  originalPrice: number,
+  currentPrice: number
+): number => {
   return Math.round(((originalPrice - currentPrice) / originalPrice) * 100);
-}; 
+};

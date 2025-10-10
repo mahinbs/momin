@@ -679,14 +679,14 @@ const Admin = () => {
                             <SelectValue placeholder="Select category" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="Interactive Robots">
-                              Interactive Robots
+                            <SelectItem value="Hair Care Electronics">
+                              Hair Care Electronics
                             </SelectItem>
-                            <SelectItem value="Cat Toys">Cat Toys</SelectItem>
-                            <SelectItem value="Smart Feeders">
-                              Smart Feeders
+                            <SelectItem value="Hair Dryers">Hair Dryers</SelectItem>
+                            <SelectItem value="Hair Straighteners">
+                              Hair Straighteners
                             </SelectItem>
-                            <SelectItem value="Dog Toys">Dog Toys</SelectItem>
+                            <SelectItem value="Styling Tools">Styling Tools</SelectItem>
                           </SelectContent>
                         </Select>
                       </div>
@@ -1423,12 +1423,12 @@ const Admin = () => {
                     <SelectValue placeholder="Select category" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="Interactive Robots">
-                      Interactive Robots
+                    <SelectItem value="Hair Care Electronics">
+                      Hair Care Electronics
                     </SelectItem>
-                    <SelectItem value="Cat Toys">Cat Toys</SelectItem>
-                    <SelectItem value="Smart Feeders">Smart Feeders</SelectItem>
-                    <SelectItem value="Dog Toys">Dog Toys</SelectItem>
+                    <SelectItem value="Hair Dryers">Hair Dryers</SelectItem>
+                    <SelectItem value="Hair Straighteners">Hair Straighteners</SelectItem>
+                    <SelectItem value="Styling Tools">Styling Tools</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

@@ -1,12 +1,12 @@
 import { GlassCard } from "@/components/ui/glass-card";
 import { Star, Quote } from "lucide-react";
-import testimonialImage from "@/assets/testimonial-priya.jpg";
+import testimonialImage from "@/assets/testimonial1.jpg";
 
 const testimonials = [
   {
     name: "Priya Sharma",
-    role: "Cat Parent",
-    content: "The Interactive Cat Toy with 2-speed adjustment has been a game-changer for my energetic Bengal cat, Leo! The 2-speed adjustment feature is perfect - I use the slower speed when he's just waking up and the faster speed for his evening play sessions. The remote control works flawlessly, and Leo absolutely loves chasing the laser dot. It's kept him entertained for hours and helped reduce his destructive behavior. The orange color is vibrant and easy to spot. Highly recommend for any cat parent!",
+    role: "Hair Styling Enthusiast",
+    content: "The Professional Ionic Hair Dryer from Beuniq has been a game-changer for my thick, frizzy hair! The 3-speed adjustment feature is perfect - I use the lower heat when styling delicate sections and the turbo speed for quick drying. The ionic technology works flawlessly, and my hair is so much smoother and shinier now. It's reduced my styling time by half and completely eliminated frizz. The sleek design is gorgeous and feels premium. Highly recommend for anyone serious about hair care!",
     rating: 5,
   }
 ];
@@ -30,7 +30,7 @@ const Testimonials = () => {
               Customers Say
             </span>
           </h2>
-          <p className="text-2xl text-muted-foreground">Real stories from happy pet families</p>
+          <p className="text-2xl text-muted-foreground">Real stories from satisfied customers</p>
         </div>
         
         <div className="max-w-5xl mx-auto animate-scale-in">
@@ -52,11 +52,11 @@ const Testimonials = () => {
               
               {/* Testimonial Text */}
               <blockquote className="text-2xl md:text-3xl mb-12 text-foreground leading-relaxed text-center font-medium">
-                "The Interactive Cat Toy with 2-speed adjustment has been a{" "}
+                "The Professional Ionic Hair Dryer from Beuniq has been a{" "}
                 <span className="bg-gradient-primary bg-clip-text text-transparent font-bold">
                   game-changer
                 </span>{" "}
-                for my energetic Bengal cat, Leo! The remote control works flawlessly, and Leo absolutely loves chasing the laser dot. It's kept him entertained for hours and helped reduce his destructive behavior."
+                for my thick, frizzy hair! The ionic technology works flawlessly, and my hair is so much smoother and shinier now. It's reduced my styling time by half and completely eliminated frizz."
               </blockquote>
               
               {/* Customer Info */}
@@ -72,7 +72,7 @@ const Testimonials = () => {
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold">Priya Sharma</div>
-                    <div className="text-lg text-primary font-medium">Cat Parent & Bengal Enthusiast</div>
+                    <div className="text-lg text-primary font-medium">Hair Styling Enthusiast</div>
                   </div>
                 </div>
               </div>

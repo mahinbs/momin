@@ -22,7 +22,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import zipptyLogo from "@/assets/zippty-logo.png";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -57,18 +57,18 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full backdrop-blur-3xl border-b border-slate-800/50 sticky top-0 z-50 bg-white/20">
+      <header className="w-full backdrop-blur-3xl border-b border-white/10 sticky top-0 z-50 bg-gradient-to-r from-[#2d1b3d] via-[#3d2447] to-[#2d1b3d]">
         <GlassCard
           intensity="heavy"
-          className="border-0 border-b border-slate-800/50 rounded-none backdrop-blur-xl shadow-lg"
+          className="border-0 border-b border-white/10 rounded-none backdrop-blur-xl shadow-lg bg-transparent"
         >
-          <div className="container mx-auto px-4 py-6 flex items-center justify-between">
+          <div className="container mx-auto px-4 py-3 flex items-center justify-between">
             <div className="flex items-center">
               <Link to="/">
                 <img
-                  src={zipptyLogo}
-                  alt="Zippty - Premium Pet Care"
-                  className="h-12 w-auto transition-transform duration-300 hover:scale-105 cursor-pointer"
+                  src={logo}
+                  alt="Beuniq - Premium Hair Care"
+                  className="w-[5rem] h-auto transition-transform duration-300 hover:scale-105 cursor-pointer"
                 />
               </Link>
             </div>
@@ -76,52 +76,52 @@ const Header = () => {
             <nav className="hidden md:flex items-center space-x-10">
               <Link
                 to="/"
-                className={`hover:text-blue-500 transition-all duration-300 font-medium text-lg relative group ${
-                  isActive("/") ? "text-blue-500" : ""
+                className={`hover:text-rose-300 transition-all duration-300 font-medium text-lg relative group text-white ${
+                  isActive("/") ? "text-rose-300" : ""
                 }`}
               >
                 Home
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-rose-400 to-amber-400 transition-all duration-300 ${
                     isActive("/") ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </Link>
               <Link
                 to="/shop"
-                className={`hover:text-blue-500 transition-all duration-300 font-medium text-lg relative group ${
-                  isActive("/shop") ? "text-blue-500" : ""
+                className={`hover:text-rose-300 transition-all duration-300 font-medium text-lg relative group text-white ${
+                  isActive("/shop") ? "text-rose-300" : ""
                 }`}
               >
                 Products
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-rose-400 to-amber-400 transition-all duration-300 ${
                     isActive("/shop") ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </Link>
               <Link
                 to="/about"
-                className={`hover:text-blue-500 transition-all duration-300 font-medium text-lg relative group ${
-                  isActive("/about") ? "text-blue-500" : ""
+                className={`hover:text-rose-300 transition-all duration-300 font-medium text-lg relative group text-white ${
+                  isActive("/about") ? "text-rose-300" : ""
                 }`}
               >
                 About
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-rose-400 to-amber-400 transition-all duration-300 ${
                     isActive("/about") ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </Link>
               <Link
                 to="/contact"
-                className={`hover:text-blue-500 transition-all duration-300 font-medium text-lg relative group ${
-                  isActive("/contact") ? "text-blue-500" : ""
+                className={`hover:text-rose-300 transition-all duration-300 font-medium text-lg relative group text-white ${
+                  isActive("/contact") ? "text-rose-300" : ""
                 }`}
               >
                 Contact
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-500 transition-all duration-300 ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-rose-400 to-amber-400 transition-all duration-300 ${
                     isActive("/contact") ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
@@ -133,11 +133,11 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => navigate("/wishlist")}
-                className="sm:flex hidden relative bg-slate-200/50 hover:bg-slate-300/50 backdrop-blur-md border border-slate-700/50 rounded-full h-12 w-12 hover:text-red-400"
+                className="sm:flex hidden relative bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full h-12 w-12 text-white hover:text-rose-300"
               >
                 <Heart className="h-6 w-6" />
                 {wishlistState.count > 0 && (
-                  <span className="absolute -top-2 -right-2 h-5 w-5 bg-gradient-to-r from-red-400 to-pink-500 rounded-full text-xs text-white flex items-center justify-center animate-bounce">
+                  <span className="absolute -top-2 -right-2 h-5 w-5 bg-gradient-to-r from-rose-400 to-pink-500 rounded-full text-xs text-white flex items-center justify-center animate-bounce">
                     {wishlistState.count > 99 ? "99+" : wishlistState.count}
                   </span>
                 )}
@@ -147,11 +147,11 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => navigate("/cart")}
-                className="relative bg-slate-200/50 hover:bg-slate-300/50 backdrop-blur-md border border-slate-700/50 rounded-full h-12 w-12 hover:text-blue-500"
+                className="relative bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full h-12 w-12 text-white hover:text-rose-300"
               >
                 <ShoppingCart className="h-6 w-6" />
                 {state.itemCount > 0 && (
-                  <span className="absolute -top-2 -right-2 h-5 w-5 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full text-xs text-white flex items-center justify-center animate-bounce">
+                  <span className="absolute -top-2 -right-2 h-5 w-5 bg-gradient-to-r from-rose-400 to-amber-500 rounded-full text-xs text-white flex items-center justify-center animate-bounce">
                     {state.itemCount > 99 ? "99+" : state.itemCount}
                   </span>
                 )}
@@ -163,7 +163,7 @@ const Header = () => {
                     <Button
                       variant="ghost"
                       size="icon"
-                      className="bg-slate-200/50 hover:bg-slate-300/50 backdrop-blur-md border border-slate-700/50 rounded-full h-12 w-12 hover:text-blue-500"
+                      className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full h-12 w-12 text-white hover:text-rose-300"
                     >
                       <User className="h-6 w-6" />
                     </Button>
@@ -202,13 +202,13 @@ const Header = () => {
                   <Button
                     variant="outline"
                     onClick={() => handleAuthClick("login")}
-                    className="bg-slate-200/50 hover:bg-slate-300/50 backdrop-blur-md border border-slate-700/50 text-slate-800 hover:text-blue-500"
+                    className="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 text-white hover:text-rose-300"
                   >
                     Sign In
                   </Button>
                   <Button
                     onClick={() => handleAuthClick("register")}
-                    className="md:block hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                    className="md:block hidden bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white border-0 px-4 py-2 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     Sign Up
                   </Button>
@@ -219,7 +219,7 @@ const Header = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setMobileMenuOpen(true)}
-                className="md:hidden bg-slate-200/50 hover:bg-slate-300/50 backdrop-blur-md border border-slate-700/50 rounded-full h-12 w-12 hover:text-blue-500"
+                className="md:hidden bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/20 rounded-full h-12 w-12 text-white hover:text-rose-300"
               >
                 <Menu className="h-6 w-6" />
               </Button>
@@ -252,18 +252,18 @@ const Header = () => {
 
         {/* Offcanvas Panel */}
         <div
-          className={`absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white/95 backdrop-blur-xl border-l border-slate-200/50 shadow-2xl transform transition-transform duration-500 ease-in-out ${
+          className={`absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-gradient-to-b from-[#2d1b3d] to-[#3d2447] backdrop-blur-xl border-l border-white/10 shadow-2xl transform transition-transform duration-500 ease-in-out ${
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
           {/* Header */}
-          <div className="flex items-center justify-between p-6 border-b border-slate-200/50">
-            <img src={zipptyLogo} alt="Zippty" className="h-8 w-auto" />
+          <div className="flex items-center justify-between p-6 border-b border-white/10">
+            <img src={logo} alt="Beuniq" className="h-8 w-auto" />
             <Button
               variant="ghost"
               size="icon"
               onClick={handleMobileMenuClose}
-              className="rounded-full h-10 w-10 hover:bg-slate-100"
+              className="rounded-full h-10 w-10 hover:bg-white/10 text-white"
             >
               <X className="h-5 w-5" />
             </Button>
@@ -275,13 +275,13 @@ const Header = () => {
               onClick={() => handleMobileNavClick("/")}
               className={`flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-300 ${
                 isActive("/")
-                  ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 border border-blue-200/50"
-                  : "hover:bg-slate-100/50"
+                  ? "bg-gradient-to-r from-rose-500/20 to-amber-500/20 text-rose-300 border border-rose-300/50"
+                  : "hover:bg-white/10 text-white"
               }`}
             >
               <div
                 className={`w-2 h-2 rounded-full ${
-                  isActive("/") ? "bg-blue-500" : "bg-slate-300"
+                  isActive("/") ? "bg-rose-400" : "bg-white/50"
                 }`}
               />
               <span className="font-medium text-lg">Home</span>
@@ -291,13 +291,13 @@ const Header = () => {
               onClick={() => handleMobileNavClick("/shop")}
               className={`flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-300 ${
                 isActive("/shop")
-                  ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 border border-blue-200/50"
-                  : "hover:bg-slate-100/50"
+                  ? "bg-gradient-to-r from-rose-500/20 to-amber-500/20 text-rose-300 border border-rose-300/50"
+                  : "hover:bg-white/10 text-white"
               }`}
             >
               <div
                 className={`w-2 h-2 rounded-full ${
-                  isActive("/shop") ? "bg-blue-500" : "bg-slate-300"
+                  isActive("/shop") ? "bg-rose-400" : "bg-white/50"
                 }`}
               />
               <span className="font-medium text-lg">Products</span>
@@ -307,13 +307,13 @@ const Header = () => {
               onClick={() => handleMobileNavClick("/about")}
               className={`flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-300 ${
                 isActive("/about")
-                  ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 border border-blue-200/50"
-                  : "hover:bg-slate-100/50"
+                  ? "bg-gradient-to-r from-rose-500/20 to-amber-500/20 text-rose-300 border border-rose-300/50"
+                  : "hover:bg-white/10 text-white"
               }`}
             >
               <div
                 className={`w-2 h-2 rounded-full ${
-                  isActive("/about") ? "bg-blue-500" : "bg-slate-300"
+                  isActive("/about") ? "bg-rose-400" : "bg-white/50"
                 }`}
               />
               <span className="font-medium text-lg">About</span>
@@ -323,13 +323,13 @@ const Header = () => {
               onClick={() => handleMobileNavClick("/contact")}
               className={`flex items-center space-x-3 p-3 rounded-lg cursor-pointer transition-all duration-300 ${
                 isActive("/contact")
-                  ? "bg-gradient-to-r from-blue-500/10 to-purple-500/10 text-blue-600 border border-blue-200/50"
-                  : "hover:bg-slate-100/50"
+                  ? "bg-gradient-to-r from-rose-500/20 to-amber-500/20 text-rose-300 border border-rose-300/50"
+                  : "hover:bg-white/10 text-white"
               }`}
             >
               <div
                 className={`w-2 h-2 rounded-full ${
-                  isActive("/contact") ? "bg-blue-500" : "bg-slate-300"
+                  isActive("/contact") ? "bg-rose-400" : "bg-white/50"
                 }`}
               />
               <span className="font-medium text-lg">Contact</span>
@@ -337,19 +337,19 @@ const Header = () => {
           </nav>
 
           {/* User Section */}
-          <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-slate-200/50 bg-gradient-to-t from-slate-50/50 to-transparent">
+          <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-white/10 bg-gradient-to-t from-[#2d1b3d] to-transparent">
             {user ? (
               <div className="space-y-4">
-                <div className="flex items-center space-x-3 p-3 bg-slate-100/50 rounded-lg">
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                <div className="flex items-center space-x-3 p-3 bg-white/10 rounded-lg">
+                  <div className="w-10 h-10 bg-gradient-to-r from-rose-500 to-amber-500 rounded-full flex items-center justify-center text-white font-semibold">
                     {user.user_metadata?.name?.charAt(0) ||
                       user.email?.charAt(0)}
                   </div>
                   <div>
-                    <p className="font-medium text-sm">
+                    <p className="font-medium text-sm text-white">
                       {user.user_metadata?.name || "User"}
                     </p>
-                    <p className="text-xs text-slate-500">{user.email}</p>
+                    <p className="text-xs text-white/60">{user.email}</p>
                   </div>
                 </div>
 
@@ -410,7 +410,7 @@ const Header = () => {
                     setMobileMenuOpen(false);
                   }}
                   variant="outline"
-                  className="w-full"
+                  className="w-full bg-white/10 border-white/20 text-white hover:bg-white/20"
                 >
                   Sign In
                 </Button>
@@ -419,7 +419,7 @@ const Header = () => {
                     handleAuthClick("register");
                     setMobileMenuOpen(false);
                   }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white"
+                  className="w-full bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white"
                 >
                   Sign Up
                 </Button>

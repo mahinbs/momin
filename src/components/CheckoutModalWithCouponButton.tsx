@@ -200,7 +200,7 @@ export const CheckoutModalWithCouponButton: React.FC<CheckoutModalProps> = ({
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment - Zippty Playful Pals</title>
+    <title>Payment - Beuniq</title>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <style>
         body {
@@ -262,7 +262,7 @@ export const CheckoutModalWithCouponButton: React.FC<CheckoutModalProps> = ({
 </head>
 <body>
     <div class="payment-container">
-        <div class="logo">🐾 Zippty Playful Pals</div>
+        <div class="logo">💇 Beuniq</div>
         <div class="order-details">
             <div><strong>Items:</strong> ${items.length} item${items.length > 1 ? 's' : ''}</div>
             <div><strong>Customer:</strong> ${address.fullName}</div>
@@ -286,7 +286,7 @@ export const CheckoutModalWithCouponButton: React.FC<CheckoutModalProps> = ({
                 amount: orderData.amount,
                 currency: orderData.currency,
                 order_id: orderData.orderId,
-                name: 'Zippty Playful Pals',
+                name: 'Beuniq - Premium Hair Care',
                 description: 'Order for ${items.length} item${items.length > 1 ? 's' : ''}',
                 handler: function(response) {
                     if (window.opener) {

@@ -8,53 +8,57 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 10%;
+    /* Elegant Hair Care Theme - Light Mode Base */
+    --background: 0 0% 98%;
+    --foreground: 280 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 280 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 280 15% 15%;
 
-    --primary: 262 83% 58%;
+    /* Primary: Rich Plum/Purple (luxury beauty) */
+    --primary: 280 60% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 262 10% 95%;
-    --secondary-foreground: 240 10% 10%;
+    /* Secondary: Soft Rose */
+    --secondary: 340 35% 92%;
+    --secondary-foreground: 280 15% 15%;
 
-    --muted: 262 10% 95%;
-    --muted-foreground: 240 10% 45%;
+    --muted: 280 10% 92%;
+    --muted-foreground: 280 10% 40%;
 
-    --accent: 25 95% 53%;
+    /* Accent: Rose Gold */
+    --accent: 15 70% 60%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 262 83% 58%;
+    --border: 280 10% 88%;
+    --input: 280 10% 88%;
+    --ring: 280 60% 45%;
 
-    /* Custom design tokens */
-    --gradient-primary: linear-gradient(135deg, hsl(226, 83%, 58%, 0.95), hsl(210, 100%, 70%));
-    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(45 95% 60%));
-    --gradient-hero: linear-gradient(135deg, hsla(226, 83%, 58%, 0.95), hsla(205, 100%, 70%, 0.85), hsla(216, 95%, 53%, 0.75));
-    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
-    --gradient-mesh: radial-gradient(circle at 20% 50%, hsl(262 83% 58% / 0.3) 0%, transparent 50%),
-                     radial-gradient(circle at 80% 20%, hsl(280 100% 70% / 0.3) 0%, transparent 50%),
-                     radial-gradient(circle at 40% 80%, hsl(25 95% 53% / 0.3) 0%, transparent 50%);
+    /* Custom design tokens for hair care elegance */
+    --gradient-primary: linear-gradient(135deg, hsl(280, 60%, 45%), hsl(320, 55%, 50%));
+    --gradient-accent: linear-gradient(135deg, hsl(15 70% 60%), hsl(30 85% 65%));
+    --gradient-hero: linear-gradient(135deg, hsla(280, 60%, 25%, 0.95), hsla(320, 50%, 30%, 0.9), hsla(340, 45%, 35%, 0.85));
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.05));
+    --gradient-mesh: radial-gradient(circle at 20% 50%, hsl(280 60% 45% / 0.2) 0%, transparent 50%),
+                     radial-gradient(circle at 80% 20%, hsl(320 55% 50% / 0.2) 0%, transparent 50%),
+                     radial-gradient(circle at 40% 80%, hsl(15 70% 60% / 0.2) 0%, transparent 50%);
     
-    /* Glass morphism effects */
-    --glass-bg: rgba(255, 255, 255, 0.1);
-    --glass-border: rgba(255, 255, 255, 0.2);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    /* Glass morphism effects with darker tones */
+    --glass-bg: rgba(40, 20, 40, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     --backdrop-blur: blur(20px);
     
-    --shadow-soft: 0 4px 20px -2px hsl(262 83% 58% / 0.1);
-    --shadow-glow: 0 0 30px hsl(262 83% 58% / 0.3);
-    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.1);
-    --shadow-float: 0 20px 60px rgba(0, 0, 0, 0.1);
+    --shadow-soft: 0 4px 20px -2px hsl(280 60% 45% / 0.15);
+    --shadow-glow: 0 0 30px hsl(280 60% 45% / 0.4);
+    --shadow-glass: 0 8px 32px rgba(0, 0, 0, 0.2);
+    --shadow-float: 0 20px 60px rgba(0, 0, 0, 0.15);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);

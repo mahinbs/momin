@@ -4,27 +4,27 @@ import { Zap, Heart, Cpu, Shield } from "lucide-react";
 const features = [
   {
     icon: Zap,
-    title: "Smart Technology",
+    title: "Advanced Technology",
     description:
-      "AI-powered toys that adapt to your pet's behavior and preferences for endless engagement.",
+      "Ionic and ceramic technology that protects your hair while delivering salon-quality results.",
   },
   {
     icon: Heart,
-    title: "Health & Wellness",
+    title: "Hair Health",
     description:
-      "Designed to promote physical activity and mental stimulation for optimal pet well-being.",
+      "Designed to minimize heat damage while promoting shinier, healthier, and more manageable hair.",
   },
   {
     icon: Cpu,
-    title: "Interactive Features",
+    title: "Smart Features",
     description:
-      "Smart toys that engage your pet's natural instincts and behaviors.",
+      "Temperature controls and multiple settings that adapt to your unique hair type and styling needs.",
   },
   {
     icon: Shield,
-    title: "Pet-Safe Design",
+    title: "Safe Design",
     description:
-      "Every product is rigorously tested and made with non-toxic, durable materials.",
+      "Every product is rigorously tested with auto shut-off and heat protection for worry-free styling.",
   },
 ];
 
@@ -40,13 +40,13 @@ const About = () => {
                 <span className="bg-gradient-accent bg-clip-text text-transparent">
                   technology
                 </span>{" "}
-                meets play
+                meets beauty
               </h2>
               <p className="text-lg text-muted-foreground">
-                At Zippty, we've combined cutting-edge technology with
-                irresistible fun to create a range of interactive toys and
-                robots designed to engage, excite, and enrich your furry
-                friend's life. Because playtime isn't just fun—it's essential.
+                At Beuniq, we've combined cutting-edge technology with
+                professional styling expertise to create a range of hair care electronics
+                designed to transform, protect, and beautify your hair.
+                Because your hair care isn't just routine—it's essential.
               </p>
             </div>
 
@@ -82,15 +82,15 @@ const About = () => {
                 <div className="text-center space-y-2">
                   <h3 className="text-2xl font-bold">Quality & Innovation</h3>
                   <p className="text-muted-foreground">
-                    Trusted by pet owners all over India
+                    Trusted by beauty enthusiasts all over India
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center space-y-1">
-                    <div className="text-3xl font-bold text-primary">2k+</div>
+                    <div className="text-3xl font-bold text-primary">5k+</div>
                     <div className="text-sm text-muted-foreground">
-                      Happy Pets
+                      Happy Customers
                     </div>
                   </div>
                   <div className="text-center space-y-1">
@@ -108,7 +108,7 @@ const About = () => {
                   <div className="text-center space-y-1">
                     <div className="text-3xl font-bold text-primary">24/7</div>
                     <div className="text-sm text-muted-foreground">
-                      Pet Support
+                      Customer Support
                     </div>
                   </div>
                 </div>

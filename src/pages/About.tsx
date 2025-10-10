@@ -12,35 +12,34 @@ import {
   Clock,
   Star,
 } from "lucide-react";
-import heroImage from "@/assets/hero-pets.jpg";
-import aboutTeam from "@/assets/about-team.jpg";
-import aboutStore from "@/assets/about-store.jpg";
-import logo from "../assets/zippty-logo.png";
+import aboutTeam from "@/assets/about-team.webp";
+import aboutStore from "@/assets/about-store.webp";
+import logo from "../assets/logo.png";
 
 const features = [
   {
     icon: Award,
-    title: "Premium Quality",
+    title: "Professional Quality",
     description:
-      "We specialize in high-quality interactive toys that keep your pets engaged, active, and entertained.",
+      "We specialize in salon-grade hair care electronics that deliver professional results in the comfort of your home.",
   },
   {
     icon: Shield,
-    title: "Trusted Quality",
+    title: "Trusted Brands",
     description:
-      "We believe your pets deserve only the best entertainment. That's why we offer interactive toys from brands you can rely on.",
+      "Your hair deserves the best care. That's why we offer premium electronics from brands you can trust for lasting quality.",
   },
   {
     icon: Zap,
-    title: "For Every Energy Level",
+    title: "For Every Hair Type",
     description:
-      "Whether your pet is highly energetic and playful or prefers more gentle stimulation, we have the perfect interactive toys.",
+      "Whether you have thick, fine, curly, or straight hair, we have the perfect styling tools designed for your unique needs.",
   },
   {
     icon: Users,
     title: "Seamless Shopping Experience",
     description:
-      "Finding the perfect interactive toy for your pet has never been easier. Our website is user-friendly and fast.",
+      "Finding the perfect hair care tool has never been easier. Our website is user-friendly, secure, and fast.",
   },
 ];
 const services = [
@@ -48,37 +47,37 @@ const services = [
     icon: Clock,
     title: "Quick & Reliable",
     description:
-      "Fast, reliable shipping so you can get your pet's supplies right when you need them.",
+      "Fast, reliable shipping so you can receive your hair care tools right when you need them.",
   },
   {
     icon: Star,
-    title: "Expert Advice",
+    title: "Expert Guidance",
     description:
-      "We offer the guidance and resources you need to give your pets the best care.",
+      "We offer styling tips and product recommendations to help you achieve salon-quality results at home.",
   },
   {
     icon: Heart,
-    title: "Affordable Quality",
+    title: "Affordable Luxury",
     description:
-      "Premium products at competitive prices, ensuring your pets get the best without breaking the bank.",
+      "Professional-grade products at competitive prices, bringing salon-quality hair care within reach.",
   },
 ];
 const stats = [
   {
-    number: "500+",
-    label: "Happy Pets",
+    number: "5000+",
+    label: "Happy Customers",
   },
   {
-    number: "15+",
+    number: "20+",
     label: "Premium Brands",
   },
   {
-    number: "50+",
-    label: "Smart Products",
+    number: "100+",
+    label: "Professional Tools",
   },
   {
-    number: "2",
-    label: "Years of Innovation",
+    number: "3",
+    label: "Years of Excellence",
   },
 ];
 const About = () => {
@@ -92,23 +91,22 @@ const About = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
           style={{ backgroundImage: `url(${aboutStore})` }}
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-60" />
 
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-6">
             <img
               src={logo}
-              alt="Zippty"
+              alt="Beuniq"
               className="w-28 mx-auto object-contain"
             />
             <h2 className="text-2xl md:text-3xl">
-              Where Your Pet's Entertainment Comes First
+              Where Your Hair's Beauty Comes First
             </h2>
             <p className="text-lg text-white/90 max-w-3xl mx-auto">
-              At Zippty, we understand that pets are more than just
-              animals—they're family members who deserve the best interactive
-              experiences. We specialize in premium interactive toys that keep
-              your furry friends engaged, active, and happy.
+              At Beuniq, we understand that your hair is your crown—it deserves the best care
+              and styling. We specialize in professional-grade hair care electronics that deliver
+              salon-quality results, helping you look and feel your absolute best every day.
             </p>
           </div>
         </div>
@@ -128,26 +126,22 @@ const About = () => {
                 </h2>
                 <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                   <p>
-                    At Zippty, we understand that pets are more than just
-                    animals—they're cherished family members who need mental
-                    stimulation and physical activity to thrive. Our passion for
-                    pet enrichment drives us to provide the highest quality
-                    interactive toys that keep your pets engaged, entertained,
-                    and healthy.
+                    At Beuniq, we believe that beautiful hair starts with the right tools.
+                    Our passion for hair care excellence drives us to curate a premium collection
+                    of professional-grade styling tools—from advanced hair dryers to ceramic
+                    straighteners—that transform your daily routine into a luxurious experience.
                   </p>
 
                   <p>
-                    Whether you have a playful young pet, an energetic adult, or
-                    a wise senior companion, we're here to offer innovative
-                    solutions that satisfy their natural instincts and
-                    curiosity.
+                    Whether you have thick curls, fine straight hair, or anything in between,
+                    we're here to offer innovative solutions that cater to your unique hair
+                    type and styling preferences.
                   </p>
 
                   <p>
-                    From interactive smart toys to innovative feeding solutions,
-                    every product in our collection is carefully selected and
-                    tested to ensure the highest quality and safety standards
-                    for your beloved pets.
+                    From ionic hair dryers to professional straighteners and curling tools,
+                    every product in our collection is carefully selected and tested to ensure
+                    the highest quality and performance standards for beautiful, healthy hair.
                   </p>
                 </div>
               </div>
@@ -194,7 +188,7 @@ const About = () => {
               </span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              Interactive Toys for Your Pets
+              Professional Hair Care Electronics
             </p>
           </div>
 
@@ -234,27 +228,27 @@ const About = () => {
                   </span>
                 </h2>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  To revolutionize pet care through innovative technology and
-                  thoughtful design, creating products that not only entertain
-                  but also contribute to the health and happiness of pets
-                  worldwide.
+                  To revolutionize hair care through innovative technology and
+                  thoughtful design, creating professional tools that empower everyone
+                  to achieve salon-quality results and feel confident in their
+                  beauty every day.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We're committed to sustainability, safety, and the wellbeing
-                  of all animals. Every purchase supports our mission to make
-                  the world a better place for pets and their families.
+                  We're committed to quality, innovation, and customer satisfaction.
+                  Every purchase supports our mission to make professional hair care
+                  accessible and affordable for everyone.
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <Heart className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">
-                      Passionate about pet welfare
+                      Passionate about hair care excellence
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <Shield className="w-5 h-5 text-primary" />
                     <span className="text-muted-foreground">
-                      Safety-first approach to design
+                      Quality-first approach to every product
                     </span>
                   </div>
                   <div className="flex items-center gap-3">
@@ -305,12 +299,11 @@ const About = () => {
 
           <div className="text-center mt-16 space-y-4">
             <h3 className="text-2xl font-bold">
-              Start Shopping with Zippty Today!
+              Start Shopping with Beuniq Today!
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Explore our wide range of products and enjoy a shopping experience
-              that's as convenient and satisfying as it is helpful for you and
-              your pet.
+              Explore our wide range of professional hair care tools and enjoy a shopping experience
+              that's as convenient and satisfying as it is transformative for your hair care routine.
             </p>
             <Button 
               variant="hero" 

@@ -41,7 +41,7 @@ const Terms = () => {
             <GlassCard className="p-8">
               <h2 className="text-3xl font-bold mb-6 text-primary">Agreement to Terms</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                These Terms of Service ("Terms") govern your use of the Zippty website and services. 
+                These Terms of Service ("Terms") govern your use of the Beuniq website and services. 
                 By accessing or using our services, you agree to be bound by these Terms and our Privacy Policy.
               </p>
               <p className="text-muted-foreground leading-relaxed">
@@ -57,17 +57,17 @@ const Terms = () => {
               </div>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Zippty provides premium pet care products and services, including:
+                Beuniq provides professional hair care products and electronics, including:
               </p>
               
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
                   <h3 className="text-xl font-semibold">Product Sales</h3>
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
-                    <li>Interactive pet toys and accessories</li>
-                    <li>Smart feeding solutions</li>
-                    <li>Pet health monitoring devices</li>
-                    <li>Premium pet care products</li>
+                    <li>Professional hair dryers and styling tools</li>
+                    <li>Hair straighteners and curling irons</li>
+                    <li>Hair care electronics and accessories</li>
+                    <li>Premium beauty and styling products</li>
                   </ul>
                 </div>
                 
@@ -76,7 +76,7 @@ const Terms = () => {
                   <ul className="list-disc list-inside text-muted-foreground space-y-2">
                     <li>Customer support and assistance</li>
                     <li>Product recommendations</li>
-                    <li>Educational content and resources</li>
+                    <li>Styling tips and hair care resources</li>
                     <li>Warranty and repair services</li>
                   </ul>
                 </div>
@@ -224,7 +224,7 @@ const Terms = () => {
               <h2 className="text-3xl font-bold mb-6 text-primary">Limitation of Liability</h2>
               
               <p className="text-muted-foreground leading-relaxed mb-6">
-                To the maximum extent permitted by law, Zippty shall not be liable for any indirect, 
+                To the maximum extent permitted by law, Beuniq shall not be liable for any indirect, 
                 incidental, special, consequential, or punitive damages arising from your use of our services.
               </p>
               
@@ -247,15 +247,15 @@ const Terms = () => {
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
                   <h4 className="font-semibold mb-2">Email</h4>
-                  <p className="text-muted-foreground">info@zippty.in</p>
+                  <p className="text-muted-foreground">info@beuniq.in</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Phone</h4>
-                  <p className="text-muted-foreground">+91 9352046174</p>
+                  <p className="text-muted-foreground">+91 9090909090</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Address</h4>
-                  <p className="text-muted-foreground">JP Colony, Shastri Nagar, Jaipur, Rajasthan -302016</p>
+                  <p className="text-muted-foreground">Banglore, India</p>
                 </div>
               </div>
             </GlassCard>

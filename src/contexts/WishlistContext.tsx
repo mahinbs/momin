@@ -83,7 +83,7 @@ export const WishlistProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Load wishlist from localStorage on mount
   useEffect(() => {
-    const savedWishlist = localStorage.getItem('zippty-wishlist');
+    const savedWishlist = localStorage.getItem('beuniq-wishlist');
     if (savedWishlist) {
       try {
         const parsedWishlist = JSON.parse(savedWishlist);
@@ -96,7 +96,7 @@ export const WishlistProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   // Save wishlist to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('zippty-wishlist', JSON.stringify(state.items));
+    localStorage.setItem('beuniq-wishlist', JSON.stringify(state.items));
   }, [state.items]);
 
   const addItem = (product: Product) => {

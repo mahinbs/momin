@@ -163,7 +163,7 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
   useEffect(() => {
     const loadCart = async () => {
       // Load from localStorage first
-      const savedCart = localStorage.getItem('zippty-cart');
+      const savedCart = localStorage.getItem('beuniq-cart');
       if (savedCart) {
         try {
           const cartItems = JSON.parse(savedCart);
@@ -191,7 +191,7 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
   // Save cart to localStorage and sync with backend whenever it changes
   useEffect(() => {
-    localStorage.setItem('zippty-cart', JSON.stringify(state.items));
+    localStorage.setItem('beuniq-cart', JSON.stringify(state.items));
     
     // Check if cart data has actually changed
     const currentCartData = JSON.stringify(state.items);
@@ -242,7 +242,7 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         lastSyncRef.current = now + 10000; // 10 seconds cooldown
         
         // Store cart locally as backup
-        localStorage.setItem('zippty-cart-backup', JSON.stringify({
+        localStorage.setItem('beuniq-cart-backup', JSON.stringify({
           items: state.items,
           timestamp: now
         }));
@@ -251,7 +251,7 @@ const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
         lastSyncRef.current = now + 15000; // 15 seconds cooldown
         
         // Store cart locally as backup
-        localStorage.setItem('zippty-cart-backup', JSON.stringify({
+        localStorage.setItem('beuniq-cart-backup', JSON.stringify({
           items: state.items,
           timestamp: now
         }));
