@@ -150,18 +150,6 @@ const HeroCarousel = ({
           </Button>
         </div>
       </div>
-
-      {/* Image Info */}
-      {/* <div className="absolute bottom-20 left-8 z-30 max-w-md">
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-          <h3 className="text-xl font-bold text-white mb-2">
-            {heroImages[currentIndex].title}
-          </h3>
-          <p className="text-white/80">
-            {heroImages[currentIndex].subtitle}
-          </p>
-        </div>
-      </div> */}
     </div>
   );
 };
